@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         showMsg(DatabaseHelper.TABLE_NAME_BTS, buffer.toString());
     }
 
-    public void viewBDS(View view){
-        Cursor result = db.getBDS();
+    public void viewBDX(View view){
+        Cursor result = db.getBDX();
         if (result.getCount()==0){
             showMsg("Error","The table is empty!");
             return;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             buffer.append("Điện thoại: " + result.getString(5) + "\n");
             buffer.append("Tình trạng: " + result.getString(6) + "\n\n");
         }
-        showMsg(DatabaseHelper.TABLE_NAME_BDS, buffer.toString());
+        showMsg(DatabaseHelper.TABLE_NAME_BDX, buffer.toString());
     }
 
     public void viewBG(View view){
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             buffer.append("Bãi đỗ xe: " + result.getString(1) + "\n");
             buffer.append("Giờ bắt đầu: " + result.getString(2) + "\n");
             buffer.append("Giờ kết thúc: " + result.getString(3) + "\n");
-            buffer.append("Tình trạng: " + result.getString(4) + "\n\n");
+            buffer.append("Giá: " + result.getString(4) + "\n\n");
         }
         showMsg(DatabaseHelper.TABLE_NAME_BG, buffer.toString());
     }
